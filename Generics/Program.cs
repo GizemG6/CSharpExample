@@ -27,6 +27,10 @@
             DisplayComparableType("deneme");
 
             DisplayType(circle);
+
+
+
+            GenericClass<int> genericClass = new GenericClass<int>(4); 
         }
 
         public abstract class Shape
