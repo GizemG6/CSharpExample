@@ -31,6 +31,30 @@
 
 
             GenericClass<int> genericClass = new GenericClass<int>(4); 
+
+
+            GenericStack<int> genericStack = new GenericStack<int>();
+
+            Console.WriteLine(genericStack.IsEmpty());
+
+            genericStack.Push(1);
+            genericStack.Push(2);
+            genericStack.Push(3);
+
+            Console.WriteLine(genericStack.Pop());
+            Console.WriteLine(genericStack.Peek());
+            Console.WriteLine(genericStack.Pop());
+
+            GenericStack<string> strStack = new GenericStack<string>();
+
+            strStack.Push("A");
+            strStack.Push("B");
+            strStack.Push("C");
+
+            Console.WriteLine(strStack.Pop());
+            Console.WriteLine(strStack.Peek());
+            Console.WriteLine(strStack.Pop());
+
         }
 
         public abstract class Shape
