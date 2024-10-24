@@ -6,7 +6,7 @@
         {
             int[] array = { 1, 2, 3 };
 
-            string[] array2 = { "A", "B", "C"};
+            string[] array2 = { "A", "B", "C" };
 
             PrintArray(array2);
 
@@ -30,7 +30,7 @@
 
 
 
-            GenericClass<int> genericClass = new GenericClass<int>(4); 
+            GenericClass<int> genericClass = new GenericClass<int>(4);
 
 
             GenericStack<int> genericStack = new GenericStack<int>();
@@ -54,6 +54,8 @@
             Console.WriteLine(strStack.Pop());
             Console.WriteLine(strStack.Peek());
             Console.WriteLine(strStack.Pop());
+
+            Repository<Student> student = new Repository<Student>();
 
         }
 

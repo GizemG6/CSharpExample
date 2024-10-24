@@ -21,8 +21,13 @@ namespace Generics
         }
     }
 
-    public class Entity()
+    public abstract class Entity()
     {
         public int Id { get; set; }
+    }
+
+    public class Student : Entity
+    {
+
     }
 }
