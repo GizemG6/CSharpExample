@@ -59,6 +59,8 @@
 
         }
 
+        // Shape soyut (abstract) bir sınıftır ve kendisinden türeyen sınıfların bir şekil olduğunu ifade eder.
+        // Circle, bu sınıftan türemiş ve aynı zamanda IEntity arayüzünü implemente etmiştir.
         public abstract class Shape
         {
 
@@ -74,6 +76,7 @@
 
         }
 
+        // Bu generic metot, parametre olarak T türünden bir dizi alır ve dizinin elemanlarını ekrana yazdırır. T herhangi bir tür olabilir.
         public static void PrintArray<T>(T[] array)
         {
             foreach (T item in array)
@@ -81,35 +84,47 @@
                 Console.WriteLine(item);
             }
         }
+
+        // 
         public void GenericMethod<T>(T i)
         {
             Console.WriteLine(i);
         }
 
+
+        // Bu metot, yalnızca referans türü (class) olan türlerle çalışır (where T : class kısıtlaması).
         public static void DisplayClassType<T>(T item) where T : class
         {
 
         }
 
+
+        // Bu metot, yalnızca değer türü (struct) olan türlerle çalışır (where T : struct kısıtlaması).
         public static void DisplayStructType<T>(T item) where T : struct
         {
 
         }
+
+        // Bu metot, yalnızca Shape sınıfından türeyen türlerle çalışır(where T : Shape kısıtlaması).
         public static void DisplayShapeType<T>(T item) where T : Shape
         {
 
         }
 
+        // Bu metot, new() kısıtlaması ile parametresiz bir kurucusu olan türlerden nesne oluşturur (where T : new()).
         public static T CreateInstance<T>() where T : new()
         {
             return new T();
         }
 
+        // Bu metot, IComparable<T> arayüzünü implemente eden türlerle çalışır (where T : IComparable<T>).
         public static void DisplayComparableType<T>(T item) where T : IComparable<T>
         {
 
         }
 
+        // Bu metot, hem class, hem IEntity arayüzünü implemente eden,
+        // hem de parametresiz bir kurucusu olan türlerle çalışır (where T : class, IEntity, new()).
         public static void DisplayType<T>(T item) where T : class, IEntity, new()
         {
 
