@@ -115,7 +115,7 @@
             #endregion
 
             #region Dictionary<string, string>
-            Dictionary<string, string> capitals = new Dictionary<string, string>()
+            /*Dictionary<string, string> capitals = new Dictionary<string, string>()
             {
                 { "Türkiye", "Ankara" },
                 { "Almanya", "Berlin" },
@@ -138,6 +138,50 @@
             foreach (KeyValuePair<string, string> kvp in capitals)
             {
                 Console.WriteLine($"Ülke {kvp.Key} başkent {kvp.Value}"); // output: Ülke Türkiye başkent Ankara, Ülke Almanya başkent Berlin, Ülke Italya başkent Roma
+            }*/
+            #endregion
+
+            #region Stack Queue
+            Queue<string> queue = new Queue<string>();
+
+            queue.Enqueue("Ali");
+            queue.Enqueue("Ayse");
+            queue.Enqueue("Mehmet");
+
+            // Dequeue metodu, sıradaki ilk kişiyi ("Ali") kuyruktan çıkarır ve firstPerson değişkenine atar.
+            string firstPerson = queue.Dequeue();
+
+            Console.WriteLine($"İlk bilet sahibi {firstPerson}"); // output: İlk bilet sahibi Ali
+
+            // Peek metodu, kuyruktaki ilk elemanı çıkarılmadan gösterir. Şu an sırada "Ayse" olduğu için, nextPerson değişkenine "Ayse" atanır.
+            string nextPerson = queue.Peek();
+
+            Console.WriteLine($"Sıradaki kişi {nextPerson}"); // output: Sıradaki kisi Ayse
+
+            Console.WriteLine("--------");
+
+            foreach (string item in queue)
+            {
+                Console.WriteLine(item); // output: Ayse, Mehmet
+            }
+
+            Stack<string> menu = new Stack<string>();
+
+            // Push metodu ile "adım gizem", "bugün cumartesi" ve "selam na ber" yığına eklenir.
+            menu.Push("adım gizem");
+            menu.Push("bugün cumartesi");
+            menu.Push("selam na ber");
+
+            // Pop metodu, yığındaki en son eklenen elemanı çıkarır. Bu durumda "selam na ber" çıkarılır ve yığından silinir.
+            menu.Pop();
+
+            // Peek metodu, yığındaki en üstte bulunan elemanı (son eklenen elemanı) gösterir ama çıkarmadan.
+            // Bu durumda Peek, "bugün cumartesi" değerini döndürür.
+            menu.Peek();
+
+            foreach (string item in menu)
+            {
+                Console.WriteLine(item); // output: bugün cumartesi, adım gizem
             }
             #endregion
         }
