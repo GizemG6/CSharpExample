@@ -1,4 +1,6 @@
-﻿namespace Collections
+﻿using System.Runtime.ConstrainedExecution;
+
+namespace Collections
 {
     public class Program
     {
@@ -142,7 +144,7 @@
             #endregion
 
             #region Stack Queue
-            Queue<string> queue = new Queue<string>();
+            /*Queue<string> queue = new Queue<string>();
 
             queue.Enqueue("Ali");
             queue.Enqueue("Ayse");
@@ -182,7 +184,48 @@
             foreach (string item in menu)
             {
                 Console.WriteLine(item); // output: bugün cumartesi, adım gizem
+            }*/
+            #endregion
+
+            #region LinkedList
+            /*LinkedList<string> linkedList = new LinkedList<string>();
+
+            linkedList.AddLast("Elma");
+            linkedList.AddLast("Armut");
+            linkedList.AddFirst("Muz"); // AddFirst("Muz") ile Muz, listenin başına eklenir. Şu an liste sırası: "Muz" -> "Elma" -> "Armut".
+
+            foreach (string s in linkedList)
+            {
+                Console.WriteLine(s); // output: Muz, Elma, Armut
             }
+
+            LinkedList<int> numbers = new LinkedList<int>();
+
+            numbers.AddLast(1);
+            numbers.AddLast(2);
+            numbers.AddLast(3);
+
+            // LinkedListNode<int> node = numbers.First; ifadesi ile liste başındaki ilk düğüm alınır (1).
+            //while döngüsünde, her düğümün değeri node.Value ile ekrana yazdırılır, ardından node = node.Next; ifadesiyle bir sonraki düğüme geçilir.
+            LinkedListNode<int> node = numbers.First;
+
+            while (node != null)
+            {
+                Console.WriteLine(node.Value); // output: 1, 2, 3
+                node = node.Next;
+            }
+
+            Console.WriteLine("sondan başa");
+
+            // node = numbers.Last; ifadesi ile listenin sonundaki düğüm (3) alınır.
+            node = numbers.Last;
+
+            // while döngüsüyle listenin sonundan başa doğru (node.Previous) gezilir ve her düğümün değeri ekrana yazdırılır.
+            while (node != null)
+            {
+                Console.WriteLine(node.Value); // output: 3, 2, 1
+                node = node.Previous;
+            }*/
             #endregion
         }
     }
